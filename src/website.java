@@ -1,3 +1,5 @@
+import org.w3c.dom.ls.LSOutput;
+
 import java.io.*;
 import java.util.*;
 public class website {
@@ -30,7 +32,8 @@ filenameIn = "helloWorld";
 
 
           try{
-         line = fileIn.nextLine();
+         line = "test";
+         // add the text file here
 
 
          
