@@ -14,27 +14,30 @@ Scanner fileIn; // input file connection
   public void file(){
       System.out.println("enter file name or path");
       //filenameIn = input.nextLine();
-filenameIn = "helloWorld";
+filenameIn = "src/helloWorld";
       //checks to see if file exists
       try{
-        fileIn = new Scanner(filenameIn);
+        fileIn = new Scanner(new FileReader(filenameIn));
         dotIndex = filenameIn.lastIndexOf(".");
-        if(dotIndex == -1) {
+//        if(dotIndex == -1) {
+//            filenameOut = filenameIn + ".html";
+//        }
+
             filenameOut = filenameIn + ".html";
-        }
+          fileOut = new PrintWriter(filenameOut);
 
 
-        else{
-                filenameOut = filenameIn.substring(0, dotIndex) + ".html";
-            }
-            fileOut = new PrintWriter(filenameOut);
+//        else{
+//                filenameOut = filenameIn.substring(0, dotIndex) + ".html";
+//            }
+//            fileOut = new PrintWriter(filenameOut);
 
 
 
           try{
-         line = "test";
+         line = fileIn.nextLine();
          // add the text file here
-
+              System.out.println(line);
 
          
 
