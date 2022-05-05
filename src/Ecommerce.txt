@@ -1,0 +1,23 @@
+e-commerce problems:
+blank website
+basic text
+API to deal with orders and stock
+data base to store custermer infomation
+various items for sale
+rows and filteres
+dark mode 
+light mode
+recent search 
+searching for products 
+auctions
+recent orders
+check to see if custermer has suffiecent funds
+new custermers
+signing in 
+shopping list
+order recipts
+recommended products?
+wish list
+product avability
+stock mangment system
+friendly UI
