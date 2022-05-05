@@ -1,6 +1,6 @@
 e-commerce problems:
-blank website
-basic text
+blank website - done
+basic text - done
 API to deal with orders and stock
 data base to store custermer infomation
 various items for sale
