@@ -50,7 +50,9 @@ filenameIn = "src/helloWorld";
                 //reads the file
                 fileOut.println("<html>");
                 fileOut.println("<head>");
+                fileOut.println("<title>"+ filenameIn + "</title>");
                 fileOut.println("</head>");
+                fileOut.println("<a href = 'https://www.google.com target =_self>'/>");
                 fileOut.println("<body>");
                 fileOut.println(line);
 
