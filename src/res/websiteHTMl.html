@@ -14,64 +14,80 @@ body {
   background-size: 100% 100%;
 }
 
-h1{
-  position:fixed;
-  bottom: 800px;
-}
 
 
-p{
-  position:fixed;
-  bottom: 780px;
-}
-
-.pngcontainer1, .pngcontainer1 img {
-        position: fixed;
-        top: 0px;
-        right: 0px;
-        left: 0px
-        
-        
-      }
-      .pngcontainer1 img {
-        z-index: 101;
-        right: 10px;
-        float:left;
-        margin: 10px;
-        
-      
-      }
-      .pngcontainer1 img:first-child {
-        
-        position: fixed;
-        float: left;
-        margin: 10px;
     
-        bottom: 100px;
-        top: 0;
-        left: 0;
-        z-index: 100;
-      }
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+html,body{
+  margin: 0px;
+}
+
+.banner{
+  background-color:#96b1cc;
+}
+
+.bannerContent{
+  padding: 16px;
+  margin: 0 auto;
+  display:flex;
+  align-items: center;
+  }
+  .bannerButtton{
+    display: flex;
+    margin: 0px auto;
+    align-items: center;
+  }
+
+
+  .bannerText{
+    flex-grow: 2;
+    line-height: 1.4;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+  }
+  .bannerButtton{
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
 
 
 </style>
 
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+
+      <div class="banner">
+        
+        <div class="bannerContent">
+
+          <div class="bannerText">
+            <strong>this is a banner</strong>
+          </div>
+
+            <button class = "bannerButtton" type="button">
+              <span class="material-symbols-outlined">
+                menu
+                </span>
+            </button>
+</div>
+
+
       
+      
+  
 
-   <div class="pngcontainer1">
-    <img src="banner.png" height="100px" />
+
+
+    
    
-      <img src="flow.png" height="100px" />
-
-    
-
-    </div>
-    
-    <h1> FIXED </h1>
-    <p>Lorem ipsum dolor sit amet consectetur,
-       adipisicing elit. Unde dignissimos 
-       eligendi sint consequatur, iure sequi tempore veniam enim veritatis ullam at cum nihil magni doloremque accusantium exercitationem, nostrum error debitis!</p>
-
 
 
 
