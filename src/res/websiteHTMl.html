@@ -8,10 +8,12 @@
 
 
 body {
-  background-image: url('lake.jpg');
+  background-image: url('grad.png');
+  size: 100%;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment:fixed;
   background-size: 100% 100%;
+
 }
 
 
@@ -30,7 +32,8 @@ html,body{
 }
 
 .banner{
-  background-color:#96b1cc;
+  background-color:#a5d3e9;
+  max-height: 80px;
 }
 
 .bannerContent{
@@ -38,10 +41,12 @@ html,body{
   margin: 0 auto;
   display:flex;
   align-items: center;
+
+  
   }
   .bannerButtton{
     display: flex;
-    margin: 0px auto;
+    margin: 0px auto ;
     align-items: center;
   }
 
@@ -72,12 +77,19 @@ html,body{
   
 }
 
-.productHolder{
-  margin: 100px;
-  display: flex;
-  position: absolute;
-  top: 100;
-  left: 20;
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+  float: left;
+  width: 12.5%;
+  padding: 100px;
+  width: 200px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
 
@@ -110,12 +122,38 @@ html,body{
 
 
 
-      <div class = "productHolder">
-        <img src="productHolder.png" height="200" />
-        <img src="productHolder.png" height="200" />
-        <img src="productHolder.png" height="200" />
-         <img src="productHolder.png" height="200" />
-        
+      <div class="row">
+        <div class="column">
+          <img src="productHolder.png" alt="productHolder" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="productHolder.png" alt="productHolder" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="productHolder.png" alt="productHolder" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="productHolder.png" alt="productHolder" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="productHolder.png" alt="productHolder" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="productHolder.png" alt="productHolder" style="width:100%">
+        </div>
+              <div class="column">
+          <img src="productHolder.png" alt="productHolder" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="productHolder.png" alt="productHolder" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="productHolder.png" alt="productHolder" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="productHolder.png" alt="productHolder" style="width:100%">
+        </div>
+  
       </div>
       
 
