@@ -93,9 +93,45 @@ html,body{
 }
 
 
+
+.dropdown {
+  display: inline-block;
+  position: relative right;
+ 
+
+
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 75px;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+  
+}
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #00A4BD;
+}
+
+
+
+
+
+
+
+
 </style>
 
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 
 
       <div class="banner">
@@ -105,10 +141,19 @@ html,body{
           <div class="bannerText">
             <strong>welcome</strong>
           </div>
-
+              <div class="dropdown">
+                <button> <img src="dropdown.png" height="25"/></button>
+               
+        
+                <div class="dropdown-content">
+                <a href="login.html">Login</a>
+                <a href="basket.html">Basket</a>
+                <a href="websiteHTMl.html">Home</a>
+                </div>
+              </div>
             <button class = "bannerButtton" type="button">
               <span class="material-symbols-outlined">
-                menu
+            
                 </span>
             </button>
 </div>
@@ -120,11 +165,23 @@ html,body{
       </a>
       </div>
 
+  
+
+
+
+
+
+
+
+
+
 
 
       <div class="row">
         <div class="column">
-          <img src="productHolder.png" alt="productHolder" style="width:100%">
+          <a href="iphone.html">
+          <img src="iphone13.png" alt="productHolder" style="width:100%">
+        </a>
         </div>
         <div class="column">
           <img src="productHolder.png" alt="productHolder" style="width:100%">
@@ -135,25 +192,7 @@ html,body{
         <div class="column">
           <img src="productHolder.png" alt="productHolder" style="width:100%">
         </div>
-        <div class="column">
-          <img src="productHolder.png" alt="productHolder" style="width:100%">
-        </div>
-        <div class="column">
-          <img src="productHolder.png" alt="productHolder" style="width:100%">
-        </div>
-              <div class="column">
-          <img src="productHolder.png" alt="productHolder" style="width:100%">
-        </div>
-        <div class="column">
-          <img src="productHolder.png" alt="productHolder" style="width:100%">
-        </div>
-        <div class="column">
-          <img src="productHolder.png" alt="productHolder" style="width:100%">
-        </div>
-        <div class="column">
-          <img src="productHolder.png" alt="productHolder" style="width:100%">
-        </div>
-  
+
       </div>
       
 
