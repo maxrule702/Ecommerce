@@ -38,31 +38,44 @@ display: block;
 }
 
 
-
-
-
 .img-zoom-result {
   border: 1px solid #d4d4d4;
   /*set the size of the result div:*/
   width: 200px;
   height: 200px;
 
+
 }
 
-.imgOverlay{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(255, 255, 255, 1.0)
-  
-}
 
-.imgOverlay:hover{
-  opacity: 1;
-}
 
+      
+      .hide {
+        display: none;
+        border: 5px double #b4b8bf;
+      }
+      a {
+        display: block;
+        margin-top: 15px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      a:hover + span {
+        display: block;
+        color: #4287f5;
+        font-size: 20px;
+      }
+      .img-zoom-result {
+        display: block;
+        margin-top: 15px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .img-zoom-result:hover + span {
+        display: block;
+        color: #4287f5;
+        font-size: 20px;
+      }
 
 
 </style>
@@ -138,11 +151,13 @@ function imageZoom(imgID, resultID) {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam asperiores expedita quasi quia labore totam magni velit itaque dolor incidunt deleniti pariatur natus eaque temporibus officiis explicabo, necessitatibus saepe distinctio!
     
     </div>
-
+  
     <div class="img-zoom-container">
       <img id="myimage" src="iphone13.png" width="225px" height="300px">
-      <div id="myresult" class="img-zoom-result"></div>
+        <div id="myresult" class="img-zoom-result"></div>
+        
     </div>
+  
     
 
 
@@ -152,7 +167,12 @@ function imageZoom(imgID, resultID) {
     imageZoom("myimage", "myresult");
     </script>
     
-
+ <div>
+      <a href=”https://www.w3docs.com/”>W3docs</a>
+      <span class="hide"> 
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+      </span>
+    </div> 
    
   
 
