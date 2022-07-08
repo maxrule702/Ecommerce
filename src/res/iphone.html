@@ -136,28 +136,30 @@ margin: 10px;
 .colourButtonMain {
   border: none;
   color: white;
-  padding: 16px 32px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: auto;
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-}
 
-.GreenButton {
-  background-color: white; 
-  color: black; 
-  border: 2px solid #4CAF50;
-  position: relative;
-  left: 725px;
-  top: 100px;
-  width: 50px;
+  width: 100px;
       height: 50px;
       -webkit-border-radius: 25px;
       -moz-border-radius: 25px;
       border-radius: 25px;
+}
+
+.GreenButton {
+  position: relative;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #4CAF50;
+  
+  left: 705px;
+  top: 100px;
+
 }
 
 .GreenButton:hover {
@@ -178,6 +180,22 @@ margin: 10px;
   background-color: #008CBA;
   color: white;
 }
+
+.PinkButton {
+  position: relative;
+  left: 600px;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #ff79eb;
+  top: 100px;
+}
+
+.PinkButton:hover {
+  background-color: #ff79eb;
+  color: white;
+}
+
+
 
 
 </style>
@@ -232,7 +250,7 @@ margin: 10px;
 
 <button class="GreenButton colourButtonMain">Green</button>
 <button class="BlueButton colourButtonMain">Blue</button>
-
+<button class="PinkButton colourButtonMain">Pink</button>
 
 
 
