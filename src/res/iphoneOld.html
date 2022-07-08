@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>src/helloWorld</title>
+</head>
+<style>
+
+   
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+html,body{
+  margin: 0px;
+}
+
+.banner{
+  background-color:#a5d3e9;
+  max-height: 80px;
+}
+
+.bannerContent{
+  padding: 16px;
+  margin: 0 auto;
+  display:flex;
+  align-items: center;
+
+  
+  }
+  .bannerButtton{
+    display: flex;
+    margin: 0px auto ;
+    align-items: center;
+  }
+
+
+  .bannerText{
+    flex-grow: 2;
+    line-height: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight:lighter;
+    color: white;
+    text-align: center;
+
+  }
+  .bannerButtton{
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+
+.logo{
+  margin:0px;
+  display: flex;
+  position: absolute;
+  top: 0px;
+  left: 5px;
+  
+}
+
+.dropdown {
+  display: inline-block;
+  position: relative right;
+ 
+
+
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  width: 75px;
+  overflow: auto;
+  box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.4);
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content a {
+  display: block;
+  color: #000000;
+  padding: 5px;
+  text-decoration: none;
+  
+}
+.dropdown-content a:hover {
+  color: #FFFFFF;
+  background-color: #00A4BD;
+}
+
+
+
+
+
+
+.mainImage{
+position: fixed;
+top: 100px;
+left: 400px;
+border: 1px;
+border-style: solid;
+float: left;
+display: block;
+}
+.mainText{
+  position: absolute;
+    top: 100px;
+    left: 435px;
+    max-width: 250px;
+  
+}
+
+
+* {box-sizing: border-box;}
+
+.img-zoom-container {
+  position: relative;
+  top: 175px;
+  left: 200px;
+
+}
+
+.img-zoom-lens {
+  position: absolute;
+  border: 1px solid #d4d4d4;
+  /*set the size of the lens:*/
+  width: 40px;
+  height: 40px;
+}
+
+
+.img-zoom-result {
+  border: 1px solid #d4d4d4;
+  /*set the size of the result div:*/
+  width: 200px;
+  height: 200px;
+  
+  
+  
+
+}
+
+      
+      .hide {
+        display: none;
+        border: 5px double #b4b8bf;
+      }
+      a {
+        display: block;
+        margin-top: 15px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      a:hover + span {
+        display: block;
+        color: #4287f5;
+        font-size: 20px;
+      }
+      .img-zoom-result {
+        display: block;
+        margin-top: 15px;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .img-zoom-result:hover + span {
+        display: block;
+        color: #4287f5;
+        font-size: 20px;
+       
+      }
+
+
+</style>
+<script>
+function imageZoom(imgID, resultID) {
+
+  
+  var img, lens, result, cx, cy;
+  img = document.getElementById(imgID);
+  result = document.getElementById(resultID);
+  /*create lens:*/
+  lens = document.createElement("DIV");
+  lens.setAttribute("class", "img-zoom-lens");
+  /*insert lens:*/
+  img.parentElement.insertBefore(lens, img);
+  /*calculate the ratio between result DIV and lens:*/
+  cx = result.offsetWidth / lens.offsetWidth;
+  cy = result.offsetHeight / lens.offsetHeight;
+  /*set background properties for the result DIV:*/
+  result.style.backgroundImage = "url('" + img.src + "')";
+  result.style.backgroundSize = (img.width * cx) + "px " + (img.height * cy) + "px";
+  /*execute a function when someone moves the cursor over the image, or the lens:*/
+  lens.addEventListener("mousemove", moveLens);
+  img.addEventListener("mousemove", moveLens);
+  /*and also for touch screens:*/
+  lens.addEventListener("touchmove", moveLens);
+  img.addEventListener("touchmove", moveLens);
+  function moveLens(e) {
+    var pos, x, y;
+    /*prevent any other actions that may occur when moving over the image:*/
+    e.preventDefault();
+    /*get the cursor's x and y positions:*/
+    pos = getCursorPos(e);
+    /*calculate the position of the lens:*/
+    x = pos.x - (lens.offsetWidth / 2);
+    y = pos.y - (lens.offsetHeight / 2);
+    /*prevent the lens from being positioned outside the image:*/
+    if (x > img.width - lens.offsetWidth) {x = img.width - lens.offsetWidth;}
+    if (x < 0) {x = 0;}
+    if (y > img.height - lens.offsetHeight) {y = img.height - lens.offsetHeight;}
+    if (y < 0) {y = 0;}
+    /*set the position of the lens:*/
+    lens.style.left = x + "px";
+    lens.style.top = y + "px";
+    /*display what the lens "sees":*/
+    result.style.backgroundPosition = "-" + (x * cx) + "px -" + (y * cy) + "px";
+  }
+  function getCursorPos(e) {
+    var a, x = 0, y = 0;
+    e = e || window.event;
+    /*get the x and y positions of the image:*/
+    a = img.getBoundingClientRect();
+    /*calculate the cursor's x and y coordinates, relative to the image:*/
+    x = e.pageX - a.left;
+    y = e.pageY - a.top;
+    /*consider any page scrolling:*/
+    x = x - window.pageXOffset;
+    y = y - window.pageYOffset;
+    return {x : x, y : y};
+  }
+}
+</script>
+
+
+
+</style>
+
+
+
+<body>
+  <div class="banner">
+        
+    <div class="bannerContent">
+
+      <div class="bannerText">
+        <strong>welcome</strong>
+      </div>
+          <div class="dropdown">
+            <button> <img src="dropdown.png" height="25"/></button>
+           
+    
+            <div class="dropdown-content">
+            <a href="login.html">Login</a>
+            <a href="basket.html">Basket</a>
+            <a href="websiteHTMl.html">Home</a>
+            </div>
+          </div>
+        <button class = "bannerButtton" type="button">
+          <span class="material-symbols-outlined">
+        
+            </span>
+        </button>
+</div>
+
+
+  <div class = "logo">
+<a href="websiteHtmlPage2.html">
+    <img src="flow.png" height="50px"/>
+  </a>
+  </div>
+
+
+
+
+      <div class ="mainText">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam asperiores expedita quasi quia labore totam magni velit itaque dolor incidunt deleniti pariatur natus eaque temporibus officiis explicabo, necessitatibus saepe distinctio!
+    
+    </div>
+  
+    <div class="img-zoom-container">
+      <img id="myimage" src="iphone13.png"  width="300px" height="400px">
+        <div id="myresult" class="img-zoom-result"></div>
+        
+    </div>
+  
+    
+
+
+   
+    <script>
+    // Initiate zoom effect:
+    imageZoom("myimage", "myresult");
+    </script>
+    
+
+   
+  
+
+
+</body>
+</html>
