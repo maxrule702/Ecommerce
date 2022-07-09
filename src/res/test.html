@@ -1,0 +1,22 @@
+<html>
+	<head>
+		<title>Demo</title>
+	</head>
+<body>
+	<h1>Changing the Image</h1>
+    <img src="redIphone.jpg" id="myImage" width="100" height="150">
+    <input type="button" onclick="changeImage()" value="Change" />
+    <script>
+        function changeImage() {
+            var image = document.getElementById('myImage');
+            if (image.src.match("redIphone.jpg")) {
+                image.src = "iphone13.png";
+            }
+            else {
+                image.src = "redIphone.jpg";
+            }
+        }
+    </script>
+<p><strong>Note:</strong> Click on the "Change" button to Change the water bottle in to the soft drink bottle</p>
+</body>
+</html>
