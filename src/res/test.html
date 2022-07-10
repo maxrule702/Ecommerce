@@ -1,22 +1,77 @@
 <html>
 	<head>
 		<title>Demo</title>
-	</head>
+	
+    </head>
+    <style>
+     .RedButton {
+  position: relative;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #e84c4c;
+        }
+
+.RedButton:hover {
+  background-color: #e84c4c;
+  color: white;
+}
+
+.BlueButton {
+  position: relative;
+  background-color: white; 
+  color: black; 
+  border: 2px solid #008CBA;
+}
+
+.BlueButton:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+
+
+</style>
 <body>
+
+
+
+
+    
 	<h1>Changing the Image</h1>
-    <img src="redIphone.jpg" id="myImage" width="100" height="150">
-    <input type="button" onclick="changeImage()" value="Change" />
+    <img src="iphoneBlue.jpg" id="myImage" width="100" height="150">
+    <button class="RedButton colourButtonMain"  type="button" onmouseover="changeImage()" value="red" > Red </button>
+
+    
+    <button class="BlueButton colourButtonMain"  type="button" onmouseover="changeImage()" value="Blue" > Blue </button>
+   
+
+
+
     <script>
         function changeImage() {
             var image = document.getElementById('myImage');
             if (image.src.match("redIphone.jpg")) {
-                image.src = "iphone13.png";
+                image.src = "redIphone.jpg";
             }
+            
+
             else {
                 image.src = "redIphone.jpg";
             }
+
+    
+
+       
         }
     </script>
+    
+
+
+
+
+
+ 
+   
 <p><strong>Note:</strong> Click on the "Change" button to Change the water bottle in to the soft drink bottle</p>
 </body>
 </html>
